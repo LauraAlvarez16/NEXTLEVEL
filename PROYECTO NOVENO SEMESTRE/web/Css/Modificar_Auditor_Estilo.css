@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: url("../Imagen/REGISTRO.jpg") no-repeat center;
+    background-size: cover;  
+}
+
+/*POSICIÓN DE TODA LAS COSAS EN EL CENTRO*/
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex-wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 100px;
+} 
+
+.container:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+
+
+/*UBICACIÓN Y COLOR DEL CONTENDOR DIVIDIDO*/
+.contact-box{
+    max-width: 950px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.88;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*POSICIÓN Y TAMAÑO CONTENEDOR DE TEXTO*/
+.informacion{
+    max-width: 840px;
+    display:  flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    
+}
+
+
+
+
+.contact-box .left, .right{
+   
+}
+
+.left{
+    margin: 0;
+    height: 100%;
+    width: 50%;
+}
+.right1, .right2, .right3{
+    
+    margin: 10px;
+    height: 100%;
+    width: 35%;
+}
+
+/*TAMAÑO Y POSICIÓN IMAGEN*/
+
+.left img{
+
+    height: 95%;
+    width: 95%;
+
+}
+.form-switch .form-check-input {
+
+    margin-left: -2em;
+}
+/*POSICIÓN TITULO*/
+
+h2{
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+/*TAMAÑO Y DISTANCIA CUADROS DE TEXTO*/
+.form-control{
+    width: 95%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.form-control:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/*BOTON*/
+.boton{
+    margin: 12px;
+    margin-top: 0px;
+}
+.btn{
+
+    width: 20%;
+    padding: 0.5rem 1rem;
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: #27ae60;
+}
+
+.form-control:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+    .left{
+        height: 200px;
+    }
+}
+.alert{
+    left: 5px;
+    width: 280px;
+    height: 50px;
+}
+
+
+/*CONTRASEÑA FUERTE*/
+
+
+
+#nivelseguridad {
+  font-weight: bold;
+  text-transform: uppercase;
+  
+}
+
+.formulario,
+.nivelSeguridad {
+  width: 80px;
+  margin: 30px auto;
+}
+
+legend {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input {
+  margin: 5px auto;
+  display: block;
+}
+
+.nivelSeguridad > p {
+  margin-right: 15px;
+}
+
+.nivelSeguridad > span#nivelseguridad {}
+
+.nivelesColores {
+  height: 10px;
+  width: 50px;
+  display: inline-block;
+  position: relative;
+  right: 100px;
+}
+
+.spanNivelesColores {
+  
+  width: 0;
+  height: 10px;
+  display: inline-block;
+  position: absolute;
+  background: url(http://momstudio.es/img/img-elmaquetadorweb/password-level-47px.png) no-repeat;
+ 
+  /*border: 1px solid #f00;
+  right: 120px;*/
+}
+
+.bajo,
+.medio,
+.alto,
+.muyAlto {
+  height: 10px;
+
+}
+
+.spanNivelesColores.nulo {
+ width:0px;
+}
+
+.spanNivelesColores.bajo {
+  width: 47px;
+}
+
+.spanNivelesColores.medio {
+  width: 94px;
+}
+
+.spanNivelesColores.alto {
+  width: 141px;
+}
+
+.spanNivelesColores.muyAlto {
+  width: 188px;
+}
+
+button {
+  display: block;
+  margin: 20px auto 5px;
+}
+.clavecorrecta {
+  text-align: center;
+  font-weight: bold;
+}
+.error {
+  color: #e00;
+  margin-top: 15px;
+}
+
+.oculto {
+  display: none;
+}
+
+.password-icon {
+  float: right;
+  position: relative;
+  margin: -49px 10px 0 0;
+  cursor: pointer;
+}
+
+

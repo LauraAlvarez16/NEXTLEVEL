@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: url("../Imagen/LOGIN1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+/*IMAGEN*/
+.contenedor-imagen{
+    flex-basis: 55%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.img{
+    width: 65%;
+    margin: 80px;
+    animation: ilustrationAnimate ease-in 1s infinite alternate;
+}
+
+/*POSICIÓN PARA QUE TODAS LAS COSAS QUEDEN EN EL CENTRO*/
+.contenedor{
+    position: relative;
+    height: 600px;  
+    display: flex;
+    align-items: center;
+}
+
+/*LOGIN*/
+
+/*SE SEPARAN MAS LAS COSAS DEL CONTENEDOR GRUPO*/
+.grupo{
+    position: relative;
+    margin: 45px;    
+}
+
+/*POSICIÓN Y COLOR AL ENLACE*/
+nav a{
+    color: #7F00FF;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 45px;
+    text-align: left;
+    padding: 30px 0px 0 0; 
+}
+
+nav a:hover{
+    color: #269abc;
+}
+
+/*FUENTE Y COLOR TITULO INICIO DE SESIÓN*/
+h1{
+    text-align: center;
+    font-weight: 700;
+    color:#283773;
+}
+
+/* CONTENEDOR DONDE ESTAN LAS COSAS DEL LOGIN*/
+/*COLOR DEL CONTENEDOR DE TEXTO*/
+.contenedor-textos{
+    background: #fff;
+    opacity: 0.88;
+    flex-basis: 30%;
+    padding: 40px 0;
+    overflow: hidden;
+    box-shadow: 0 0 6px 0 rgba(255,255,255,0.8);
+    border-radius: 10px;  
+}
+
+/*POSICIÓN DEL CONTENEDOR DE TEXTO*/
+.contenedor-textos{
+    width: 100%;
+    margin-left: 88px;
+}
+
+contenedor-textos.grupo{
+    position: relative;
+    margin: 45px;
+}
+
+/*EDICIÓN DE CUADROS DE TEXTO*/
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c6c6c6;
+    font-weight: 800;
+}
+
+input:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+
+/*EDICIÓN TEXTOS QUE DICEN USUARIO, CONTRASEÑA Y LINEAS*/
+label{
+    color: #c6c6c6;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+/*MOVIMIENTO DE LOS CUADROS DE TEXTO*/
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 18px;
+    color: #E100FF;
+}
+
+/*ANIMACIÓN DE LINEA DONDE SE UBICA EL TEXTO*/
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;  
+}
+
+/*CONFIGURACIÓN BOTON*/
+button{
+    font-family: 'Raleway';
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+button:hover{
+    background: #E100FF;
+}
+
+/*ADAPTAR PLATAFORMA*/
+
+@keyframes ilustrationAnimate{
+    0%{
+        transform: scale(1);
+    } 100%{
+        transform:scale(1.04);
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .contenedor{
+        flex-direction: column;
+    }
+    
+    .contenedor-textos{
+        display: flex;
+        padding-left:0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 40%;
+        text-align: center;
+    }
+    .contenedor-imagen{
+        flex-basis: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .img{
+        height: 90%; 
+    }
+}
+
+@media screen and (max-width: 500px){
+    
+    .contenedor-textos{
+        flex-basis: 40%;
+        justify-content: flex-start;
+    }
+}
+
+.alert{
+    left: 50px;
+    width: 78%;
+    height: 50px;
+}
+
+.password-icon {
+  float: right;
+  position: relative;
+  margin: -30px 10px 0 0;
+  cursor: pointer;
+  color: #E100FF;
+}
