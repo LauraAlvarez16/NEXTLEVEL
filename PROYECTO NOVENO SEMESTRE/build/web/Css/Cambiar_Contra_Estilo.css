@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    width: 100%;
+    background: #59C173;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+/*LOGIN*/
+
+/*SE SEPARAN MAS LAS COSAS DEL CONTENEDOR GRUPO*/
+.grupo{
+    position: relative;
+    margin: 35px;    
+}
+
+
+/*FUENTE Y COLOR TITULO INICIO DE SESIÓN*/
+h1{
+    text-align: center;
+    font-weight: 700;
+    color:#283773;
+}
+
+/* CONTENEDOR DONDE ESTAN LAS COSAS DEL LOGIN*/
+/*COLOR DEL CONTENEDOR DE TEXTO*/
+.contenedor-textos{
+    background: #fff;
+    opacity: 0.88;
+    flex-basis: 30%;
+    padding: 15px 0;
+    overflow: hidden;
+    box-shadow: 0 0 6px 0 rgba(255,255,255,0.8);
+    border-radius: 10px;  
+}
+
+/*POSICIÓN DEL CONTENEDOR DE TEXTO*/
+.contenedor-textos{
+    width: 510px;
+    margin: 35px auto;
+}
+
+contenedor-textos.grupo{
+    position: relative;
+    margin: 45px;
+}
+
+/*EDICIÓN DE CUADROS DE TEXTO*/
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c6c6c6;
+    font-weight: 800;
+}
+
+input:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+
+
+
+/*EDICIÓN TEXTOS QUE DICEN USUARIO, CONTRASEÑA Y LINEAS*/
+label{
+    color: #c6c6c6;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+/*MOVIMIENTO DE LOS CUADROS DE TEXTO*/
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 18px;
+    color: #E100FF;
+}
+
+/*ANIMACIÓN DE LINEA DONDE SE UBICA EL TEXTO*/
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;  
+}
+
+/*CONFIGURACIÓN BOTON*/
+
+/*CONFIGURACIÓN BOTON*/
+.grupo button{
+    font-family: 'Raleway';
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+button:hover{
+    background: #E100FF;
+}
+/*ADAPTAR PLATAFORMA*/
+
+@keyframes ilustrationAnimate{
+    0%{
+        transform: scale(1);
+    } 100%{
+        transform:scale(1.04);
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .contenedor{
+        flex-direction: column;
+    }
+
+    .contenedor-textos{
+        display: flex;
+        padding-left:0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 40%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    .contenedor-textos{
+        flex-basis: 40%;
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+
+/*CONTRASEÑA FUERTE*/
+
+
+
+#nivelseguridad {
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.formulario,
+.nivelSeguridad {
+    width: 90px;
+    margin: 35px auto;
+}
+
+legend {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input {
+    margin: 5px auto;
+    display: block;
+}
+
+.nivelSeguridad > p {
+    margin-right: 15px;
+}
+
+.nivelSeguridad > span#nivelseguridad {}
+
+.nivelesColores {
+    height: 10px;
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    right: 60px;
+}
+
+.spanNivelesColores {
+
+    width: 0;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    background: url(http://momstudio.es/img/img-elmaquetadorweb/password-level-47px.png) no-repeat;
+
+    /*border: 1px solid #f00;
+    right: 120px;*/
+}
+
+.bajo,
+.medio,
+.alto,
+.muyAlto {
+    height: 10px;
+
+}
+
+.spanNivelesColores.nulo {
+    width:0px;
+}
+
+.spanNivelesColores.bajo {
+    width: 47px;
+}
+
+.spanNivelesColores.medio {
+    width: 94px;
+}
+
+.spanNivelesColores.alto {
+    width: 141px;
+}
+
+.spanNivelesColores.muyAlto {
+    width: 188px;
+}
+
+button {
+    display: block;
+    margin: 20px auto 5px;
+}
+.clavecorrecta {
+    text-align: center;
+    font-weight: bold;
+}
+.error {
+    color: #e00;
+    margin-top: 15px;
+}
+
+.oculto {
+    display: none;
+}
+
+.password-icon {
+    float: right;
+    position: relative;
+    margin: -30px 10px 0 0;
+    cursor: pointer;
+}

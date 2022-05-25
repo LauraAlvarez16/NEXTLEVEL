@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 500px;
+    background: url(../Imagen/fondoauditor.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    text-align: center;
+    opacity: 0.8;
+}
+header .textos{
+    margin-top: 152px;
+
+}
+.titulo{
+    color: #E100FF;
+    font-size: 120px;
+    font-weight: 500;
+}
+h1.titulo:after{
+    content: '';
+    position: absolute;
+    left: 45%;
+    transform: translateY(1800%);
+    height: 7px;
+    width: 80px;
+    border-radius: 2px;
+    background-color: #c9302c;
+}
+
+/*Diagonal*/
+.sesgoabajo{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 20vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+}
+.sesgoarriba{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 15vh 100vw 0 0;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;  
+}
+
+/*Quienes Somos*/
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+.subtitulo{
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #283773;
+}
+.parrafo{
+    margin-bottom: 13px;
+    text-align: justify;
+    line-height: 24px;
+    color: black;
+}
+
+/*imagenes en diagonal*/
+.galeria{
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+.imagenes{
+    width: 20%; /*80*/
+    height: 330px; /*200*/
+    overflow: hidden;
+    position: relative;
+}
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Mision y Vision*/
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.contenedor-servicio img{
+    width: 35%;
+}
+.informacion{
+    width: 45%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: justify;
+    line-height: 24px;
+    color: black;
+}
+
+/*Politicas*/
+.items{
+    width: 45%;
+    text-align: justify;
+    line-height: 24px;
+    color: black;
+}
+.iso{
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+
+/*Footer*/
+.contenedor-footer{
+    background: #ff50e159;
+    height: 120px;
+}
+.titulo-footer, .subtitulo-footer{
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    font-size: 56px;
+    color: #283773;
+}
+.subtitulo-footer{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+

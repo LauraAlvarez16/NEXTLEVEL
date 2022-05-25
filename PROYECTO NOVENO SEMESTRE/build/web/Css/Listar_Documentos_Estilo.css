@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: url("../Imagen/LISTA DOCUMENTO.jpg") no-repeat center;
+    
+    background-size: cover;  
+    
+}
+
+#titulo{
+        align-content: center;
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    color: #000;
+    font-weight: 600;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.Buscar{
+    display: flex;
+    margin: 20px;
+    margin-bottom: 0;
+  
+}
+.boton_buscar{
+    width: 20%;
+    margin: 20px;
+    margin-bottom: 5px;
+}
+.texto{
+    width: 20%;
+    margin: 20px;
+    margin-bottom: 5px;
+}
